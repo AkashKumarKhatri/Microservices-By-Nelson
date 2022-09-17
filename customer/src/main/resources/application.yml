@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: sa
+    url: jdbc:h2:tcp://localhost/~/customer
+    password: ''
+  jpa:
+    generate-ddl: 'true'
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        format_sql: 'true'
+    show-sql: 'true'
+  application:
+    name: Customer
+server:
+  port: '8080'
