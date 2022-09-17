@@ -16,11 +16,11 @@ public class FraudCheckHistoryService {
     public boolean isFraudulentCustomer(Long customerId) {
         fraudCheckHistoryRepository.save(FraudCheckHistory.builder()
                 .customerId(customerId)
-                .isFraudster(true)
+                .isFraudster(false)
                 .createdAt(LocalDateTime.now())
                 .build()
         );
-        return true;
+        return false;
     }
 
 }
